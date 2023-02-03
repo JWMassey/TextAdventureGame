@@ -48,31 +48,43 @@ const gameOver5 = `You looked at the trap and the light BLINDED YOU! ${gameOver}
 
 const win = `The ghost trap sucked Slimer in and closed. CONGRATULATIONS! YOU CAUGHT SLIMER!!!`;
 
-//Game code
+//Alerts user to start game
 alert(start)
+
+//Sets the value of "ans" to user's response to the first question
 let ans = prompt(q1)
+//If user answers "1" to q1, continues the game
 if (ans == 1) {
     ans = prompt(q2)
+    //If user answers "1" to q2, continues the game
     if (ans == 1) {
         ans = prompt(q3)
+        //If user answers "2" to q3, continues the game
         if (ans == 2) {
             ans = prompt(q4)
+            //If user answers "1" to q4, continues the game
             if (ans == 1) {
                 ans = prompt(q5)
+                //If user answers "2" to q5, tells them they win!
                 if (ans == 2) {
                     alert(win)
+                //If user doesn't answer q5 correctly, gives them a game over message
                 } else {
                     alert(gameOver5)
                 }
+            //If user doesn't answer q4 correctly, gives them a game over message
             } else {
                 alert(gameOver4)
             }
+        //If user doesn't answer q3 correctly, gives them a game over message
         } else {
             alert(gameOver3)
         }
+    //If user doesn't answer q2 correctly, gives them a game over message
     } else {
         alert(gameOver2)
     }
+//If user doesn't answer q1 correctly, gives them a game over message
 } else {
     alert(gameOver1)
 }
